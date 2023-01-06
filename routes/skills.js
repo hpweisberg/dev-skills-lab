@@ -3,10 +3,17 @@ import * as skillsCtrl from '../controllers/skills.js'
 
 const router = Router()
 
-/* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource')
-})
+//! GET /skills
+router.get('/', skillsCtrl.index)
+
+//! GET /slills/new
+router.get('/new', skillsCtrl.new)
+
+//! GET /slills/:id
+router.get('/:id', skillsCtrl.show)
+
+//! POST /skills
+router.post('/', skillsCtrl.create)
 
 export {
   router
