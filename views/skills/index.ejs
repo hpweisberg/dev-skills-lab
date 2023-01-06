@@ -8,12 +8,16 @@
 </head>
 <body>
   <h1>Web Dev Skills:</h1>
-  <% skills.forEach(skill => { %>
-    <li>
-      <a href="/skills<%= skills._id%>"><%= skills.language %></a>
-      -
-      <%= skills.knowledge ? 'has' : 'does not have' %> 
-    </li>
-  <% }) %>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li>
+        <a href="/skills/<%= skill._id %>"><%= skill.language %></a>
+        -
+        <%= skill.knowledge ? 'has knowledge' : 'does not have knowledge' %> 
+      </li>
+      <% }) %>
+  </ul>
+  <a href="./">Home</a>
+  <a href="/skills/new">Add To-Do</a>
 </body>
 </html>
