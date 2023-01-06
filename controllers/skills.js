@@ -21,7 +21,8 @@ function newSkill(req, res){
 }
 
 function create(req, res){
-  req.body.knowledge = false
+  console.log(req.body)
+  req.body.knowledge = !!req.body.knowledge
   Skill.create(req.body)
   .then(skill => {
     res.redirect('/skills')
@@ -42,7 +43,7 @@ function show(req, res){
   })
   .catch(error => {
     console.log(error)
-    res.redirect('/todos')
+    res.redirect('/')
   })
 }
 
