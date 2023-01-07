@@ -18,6 +18,9 @@ router.post('/', skillsCtrl.create)
 //! DELETE /skills/:id
 router.delete('/:id', skillsCtrl.delete)
 
+//! GET /skills/:id
+router.get('/:id/edit', skillsCtrl.edit)
+
 export {
   router
 }
