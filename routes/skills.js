@@ -21,6 +21,9 @@ router.delete('/:id', skillsCtrl.delete)
 //! GET /skills/:id
 router.get('/:id/edit', skillsCtrl.edit)
 
+//! PUT /todos/:id
+router.put('/:id', skillsCtrl.update)
+
 export {
   router
 }
