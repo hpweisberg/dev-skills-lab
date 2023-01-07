@@ -1,10 +1,22 @@
 body {
+  display: flex;
+  flex-direction: column;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: darkgray;
 }
 
 a {
-  color: #00B7FF;
+  color: #014662;
+}
+
+.nav {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+a:hover {
+  color: #02719d;
 }
 
 .delete-form {
@@ -18,4 +30,9 @@ a {
 	
 li {
   list-style: none;
+  padding: 2px;
+}
+
+ul {
+  border: #00B7FF 3px solid;
 }
